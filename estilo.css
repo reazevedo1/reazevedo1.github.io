@@ -1,0 +1,78 @@
+			*{
+ 				box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+            .topnav{
+                display: inline-block;
+                background-color: #333;
+                position: absolute;
+                width: 100%;
+            }
+            .topnav ul{  
+                float: right;
+                list-style: none;  
+                width: 500px;
+            }
+            .topnav ul li{
+                float: right;   
+                position: relative; /* Necessário para o item filho se posicionar a LI que é o pai */
+            }
+            .topnav ul li a{
+
+                display: block;
+                padding: 10px;
+                border: 1px #000000 solid;
+                text-decoration: none;
+                color: #000000;
+            }
+            .topnav ul li:hover > a{
+                background-color: #333;
+                color: #FFFFFF;
+            }
+            .topnav ul li ul{
+                display: none;
+                position: absolute;
+            }
+            .topnav ul li:hover ul{ 
+                width: 100%; /* Tamanho do menu filho */
+                display: block;
+            }
+            .topnav ul li ul li{
+
+                width: 110px;
+                cursor: pointer;
+            }
+            .topnav ul li ul li:hover > a{
+                background-color: #333;
+                color: #FFFFFF; 
+            }
+            .topnav ul li ul li ul li{
+                display: none;
+            }
+            .topnav ul li ul li ul{
+                top: 0; /* Para deixar o sub-menu na mesma linha do menu pai */
+            }
+            .topnav ul li ul li:hover ul li{
+                display: block;
+                width: 130px;
+                right: 100%; /* Para deixar o sub-menu ao lado do menu pai */
+            }
+			body {
+ 			  margin: 0;
+			}
+			.content {
+			  background-color: #ddd;
+			  padding: 10px;
+			  height: 200px;
+			}
+			.footer {
+			  background-color: #f1f1f1;
+			  padding: 10px;
+              text-align: center;
+			}
+			h2 {
+				color: black;
+				text-align: center;
+				font: italic 14px;
+			}
