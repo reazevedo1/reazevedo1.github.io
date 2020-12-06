@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 02- Rocketseat</title>
+</head>
+<body>
+	<h1>Exercício 4</h1>
+    <ul></ul>
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+	<script>
+		var nomes = ["Diego", "Gabriel", "Lucas"];
+		var listaElement = document.querySelector('ul');
+		var inputElement = document.querySelector('input');
+
+		function addItem(texto){
+		    var liElment = document.createElement('li');
+		    var textElement = document.createTextNode(texto);
+		    
+		    liElment.appendChild(textElement);
+		    listaElement.appendChild(liElment);
+		}
+
+		function adicionar(){
+		    addItem(inputElement.value);
+		    inputElement.value = ""; 
+		}
+
+		for(nome of nomes){
+		    addItem(nome);
+		}
+	</script>
+	</body>
+</html>

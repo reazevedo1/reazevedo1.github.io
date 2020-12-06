@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Desafio 02-Rocketseat</title>
+	</head>
+	<body>
+		<h1> Exercício 01 </h1>
+			<button onclick="novoElemento()">CRIAR</button>
+			<div id="botao">
+				<br>
+			</div>
+		<script>
+			function novoElemento() {
+				var divnova = document.createElement('div')
+				divnova.style.width = 100;
+				divnova.style.height = 100;
+				divnova.style.backgroundColor = '#F00';
+				var bt = document.getElementById("botao");
+				bt.appendChild(divnova);
+			}
+
+
+
+		</script>
+	</body>
+</html>
