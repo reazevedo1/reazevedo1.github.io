@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1> Exercício 3 </h1>
+<input id = "H2" placeholder= "MOL de H2">
+<input id = "O" placeholder= "MOL de Oxigênio">
+<button onclick="R();">Executar</button>
+<p id="resultado"></p>
+
+
+<script >
+   function R(){
+   	var h2 = document.getElementById("H2").value;
+   	var oxi = document.getElementById("O").value;
+
+   	if(h2>oxi){
+   		var l = "O Oxigênio é o reagente limitante, possuindo apenas "+ oxi + " MOL's. Logo será formado " + oxi + "MOL's de H20";
+   	}else if (oxi>h2){
+   		var l = "O H2 é o reagente limitante, possuindo apenas "+ h2 + " MOL's. Logo será formado " + h2 + "MOL's de H20";
+   	}else{
+   		var l = "Não há reagente em excesso.Logo será formado " + oxi + "MOL's de H20";
+   	}
+
+
+
+   	document.getElementById("resultado").innerHTML = l;
+   }
+</script>
+
+
+</body>
+</html>
