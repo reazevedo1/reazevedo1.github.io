@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número01</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>Soma</h1>
+		<input type="number" id="n1"/>
+		<input type="number" id="n2"/>
+		<button onClick="recebevalores()">Somar</button>
+	</body>
+	<script>
+		function recebevalores(){
+			var v1 = document.getElementById("n1").value;
+			var v2 = document.getElementById("n2").value;
+			num1 = parseInt(v1);
+			num2 = parseInt(v2);
+
+			var resultado = soma(num1, num2);
+
+			alert("A soma de " + num1 + " com " + num2 + " é igual a " + resultado);
+		}
+
+		function soma(valor1, valor2){
+			return valor1 + valor2;
+		}
+			
+	</script>
+</html>
