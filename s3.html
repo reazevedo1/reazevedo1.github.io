@@ -14,8 +14,10 @@
 <script >
    function R(){
    	var h2 = document.getElementById("H2").value;
+      h2 = parseFloat(h2);
    	var oxi = document.getElementById("O").value;
-
+      h2 = parseFloat(h2);
+      
    	if(h2>oxi){
    		var l = "O Oxigênio é o reagente limitante, possuindo apenas "+ oxi + " MOL's. Logo será formado " + oxi + "MOL's de H20";
    	}else if (oxi>h2){
