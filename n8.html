@@ -13,18 +13,19 @@
 		<button onClick="recebevalores()">Converter</button>
 	</body>
 	<script>
-function recebevalores(){
-	var temp = document.getElementById("tempF").value;
-	tf = parseInt(temp);
+		function recebevalores(){
+			var temp = document.getElementById("tempF").value;
+			tf = parseInt(temp);
 
-	var resultado = convert(tf);
+			var resultado = convert(tf);
 
-	alert(resultado + " graus celsius");
-}
+			alert(resultado + " graus celsius");
+		}
 
-function convert(tf){
-	var c = (5*(tf-32))/9;
-	return c;
+		function convert(tf){
+			var c = (5*(tf-32))/9;
+			return c;
+		}
 			
 	</script>
 </html>

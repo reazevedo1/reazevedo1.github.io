@@ -17,19 +17,18 @@
 			var c = document.getElementById("custo").value;
 			var pd = 28;
 			var im = 45;
-			var cf = parseInt(c);
+			cf = parseInt(c);
 
 			var resultado = custofinal( cf, pd, im);
 
 			alert("O valor total do carro é igual a " + resultado);
 		}
 
-		function custofinal(){
+		function custofinal(cf, pd, im){
 			var i = (cf*(im/100));
 			var p = pd/100;
-			var r = cf + p + i;
-			return r;
+			return cf + p+ i;
 		}
-			
+					
 	</script>
 </html>

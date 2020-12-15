@@ -15,22 +15,23 @@
 		<button onClick="recebevalores()">Calcular</button>
 	</body>
 	<script>
-function recebevalores(){
-	var v1 = document.getElementById("n1").value;
-	var v2 = document.getElementById("n2").value;
-	var v3 = document.getElementById("n3").value;
+		function recebevalores(){
+			var v1 = document.getElementById("n1").value;
+			var v2 = document.getElementById("n2").value;
+			var v3 = document.getElementById("n3").value;
 
-	num1 = parseInt(v1);
-	num2 = parseInt(v2);
-	num3 = parseInt(v3);	
+			num1 = parseInt(v1);
+			num2 = parseInt(v2);
+			num3 = parseInt(v3);	
 
-	var resultado = media(num1, num2, num3);
+			var resultado = media(num1, num2, num3);
 
-	alert("A média final do aluno é igual a " + resultado);
-}
+			alert("A média final do aluno é igual a " + resultado);
+		}
 
-function media(n1, n2, n3){
-	
-			
+		function media(n1, n2, n3){
+			return (n1 * 2 + n2 * 3 + n3 * 5)/10;
+		}
+					
 	</script>
 </html>
