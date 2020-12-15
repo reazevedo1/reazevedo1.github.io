@@ -13,22 +13,23 @@
 		<button onClick="recebevalores()">Total</button>
 	</body>
 	<script>
-function recebevalores(){
-	var c = document.getElementById("custo").value;
-	var pd = 28;
-	var im = 45;
-	cf = parseInt(c);
+		function recebevalores(){
+			var c = document.getElementById("custo").value;
+			var pd = 28;
+			var im = 45;
+			var cf = parseInt(c);
 
-	var resultado = custofinal( cf, pd, im);
+			var resultado = custofinal( cf, pd, im);
 
-	alert("O valor total do carro é igual a " + resultado);
-}
+			alert("O valor total do carro é igual a " + resultado);
+		}
 
-function custofinal(cf, pd, im){
-	var i = (cf*(im/100));
-	var p = pd/100;
-	return cf + p+ i;
-}return valor1 + valor2;
+		function custofinal(cf, pd, im){
+			var i = (cf*(im/100));
+			var p = pd/100;
+			var r = cf + p + i;
+			return r;
+		}return valor1 + valor2;
 		}
 			
 	</script>
