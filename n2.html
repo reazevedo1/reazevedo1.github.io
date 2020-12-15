@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número02</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>Maior</h1>
+		<input type="number" id="n1"/>
+		<input type="number" id="n2"/>
+		<button onClick="recebevalores()">Maior</button>
+	</body>
+	<script>
+		function recebevalores(){
+			var v1 = document.getElementById("n1").value;
+			var v2 = document.getElementById("n2").value;
+			num1 = parseInt(v1);
+			num2 = parseInt(v2);
+
+			var resultado = maior(num1, num2);
+
+			alert("O maior número entre " + num1 + " e " + num2 + " é igual a " + resultado);
+		}
+
+		function maior(valor1, valor2){
+				if(valor1>valor2){
+				return valor1 ;
+				}
+				else{
+				return valor2 ;
+				}
+		}
+			
+	</script>
+</html>

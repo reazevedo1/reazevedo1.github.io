@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número10</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>Compras</h1>
+		<input type="number" id="n"/>
+		<button onClick="recebevalores()">Valor total</button>
+	</body>
+	<script>
+function recebevalores(){
+	var n = document.getElementById("n").value;
+	nm = parseInt(n);
+
+	var resultado = valor(nm);
+
+	alert("O valor total da compra é de " + resultado);
+}
+
+function valor(n){
+	if(n<12)
+	{
+		return n*1.30;
+	}else{
+		return n;
+	}
+}
+			
+	</script>
+</html>

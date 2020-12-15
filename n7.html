@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número07</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>Quant. de carros vendidos -> Valor total de vendas -> Salário fixo -> valor recebido por carro vendido</h1>
+		<input type="number" id="n1"/>
+		<input type="number" id="n2"/>
+		<input type="number" id="n3"/>
+		<input type="number" id="n4"/>
+		<button onClick="recebevalores()">Salário final</button>
+	</body>
+	<script>
+function recebevalores(){
+	var v1 = document.getElementById("n1").value;
+	var v2 = document.getElementById("n2").value;
+	var v3 = document.getElementById("n3").value;
+	var v4 = document.getElementById("n4").value;
+	n_car = parseInt(v1);
+	v_vend = parseInt(v2);
+	s_fx = parseInt(v3);
+	por_car = parseInt(v4);
+
+	var resultado = salario(n_car, v_vend, s_fx, por_car);
+
+	alert("O salário total é igual a " + resultado);
+}
+
+function salario( nc, vv, sf, pc){
+
+	var comis = nc*pc;
+	var pcent = (vv*(5/100));
+	var result = sf + comis + pcent;
+	return result; 
+}
+			
+	</script>
+</html>

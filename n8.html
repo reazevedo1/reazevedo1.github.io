@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número08</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>F -> °C</h1>
+		<input type="number" id="temF"/>
+		<button onClick="recebevalores()">Converter</button>
+	</body>
+	<script>
+function recebevalores(){
+	var temp = document.getElementById("tempF").value;
+	tf = parseInt(temp);
+
+	var resultado = convert(tf);
+
+	alert(resultado + " graus celsius");
+}
+
+function convert(tf){
+	var c = (5*(tf-32))/9;
+	return c;
+			
+	</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número03</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>É primo</h1>
+		<input type="number" id="n"/>
+		<button onClick="primo()">Conferir</button>
+	</body>
+	<script>
+function primo(){
+	var v = document.getElementById("n").value;
+	n = parseInt(v);
+	var c = 0;
+	var resultado;
+	for (var i = 1; i <= n ; i++) {
+		if (n%i == 0){
+			c = c + 1;
+		}
+	}
+	if (c == 2)
+	{
+		resultado= "Este é um número primo";
+	}
+	else{
+		resultado= "Este não é um número primo";
+	}
+	alert(resultado);
+}
+			
+	</script>
+</html>

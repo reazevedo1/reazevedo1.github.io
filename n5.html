@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número05</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>Salário & percentual de reajuste</h1>
+		<input type="number" id="sal"/>
+		<input type="number" id="per"/>
+		<button onClick="recebevalores()">Salário atualizado</button>
+	</body>
+	<script>
+		function recebevalores(){
+			var salario = document.getElementById("sal").value;
+			var percentual = document.getElementById("per").value;
+			s = parseInt(salario);
+			p = parseInt(percentual);
+
+			var resultado = conta( s, p);
+
+			alert("O valor atualizado de seu saário é igual a " + resultado);
+		}
+
+		function conta(salario, reajuste){
+			var porcentagem= reajuste/100;
+			var c1= salario*porcentagem;
+			return salario + c1;
+		}
+	</script>
+</html>

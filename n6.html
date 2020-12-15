@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Número01</title>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+
+	<body>
+	<h1>Custo</h1>
+		<input type="number" id="custo"/>
+		<button onClick="recebevalores()">Total</button>
+	</body>
+	<script>
+function recebevalores(){
+	var c = document.getElementById("custo").value;
+	var pd = 28;
+	var im = 45;
+	cf = parseInt(c);
+
+	var resultado = custofinal( cf, pd, im);
+
+	alert("O valor total do carro é igual a " + resultado);
+}
+
+function custofinal(cf, pd, im){
+	var i = (cf*(im/100));
+	var p = pd/100;
+	return cf + p+ i;
+}return valor1 + valor2;
+		}
+			
+	</script>
+</html>
