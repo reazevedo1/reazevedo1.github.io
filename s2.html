@@ -23,6 +23,7 @@
 <script >
 	function t(){
 	var rmol = document.getElementById("mol").value;
+	rmol = parseFloat(rmol.replace(',','.'));
 	var go = 8;
 	var r= rmol*go;
 	var resultado= "1 MOL de H2O -> 8 G de O2 <br>" + rmol + "MOL de H2O -> X G de O2 <br> <br>" + rmol + " * " + go + " = x G de O2 <br>" + "X G de O2 = " + r; 
