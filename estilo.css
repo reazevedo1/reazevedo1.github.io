@@ -1,5 +1,5 @@
-	    *{
- 		box-sizing: border-box;
+			*{
+ 				box-sizing: border-box;
                 margin: 0px;
                 padding: 0px;
             }
@@ -58,21 +58,33 @@
                 width: 130px;
                 right: 100%; /* Para deixar o sub-menu ao lado do menu pai */
             }
-	    body {
- 	 	margin: 0;
-	    }
-	    .content {
-		background-color: #ddd;
-		padding: 10px;
-		height: 200px;
-	    }
-	    .footer {
-		background-color: #f1f1f1;
-	        padding: 10px;
-                text-align: center;
-	    }
-	    h2 {
-		color: black;
-		text-align: center;
-		font: italic 14px;
-		}
+            .menu{
+                display: inline-block;
+                background-color: pink;
+                position: absolute;
+                width: 100%;
+            }
+            .content_s {
+              background-color: #ddd;
+              padding: 10px;
+              height: 200px;
+              text-align: center;
+            }
+			body {
+ 			  margin: 0;
+			}
+			.content {
+			  background-color: #ddd;
+			  padding: 10px;
+			  height: 200px;
+			}
+			.footer {
+			  background-color: #f1f1f1;
+			  padding: 10px;
+             		  text-align: center;
+			}
+			h2 {
+				color: black;
+				text-align: center;
+				font: italic 14px;
+			}
