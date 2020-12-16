@@ -17,8 +17,8 @@
 		function recebevalores(){
 			var salario = document.getElementById("sal").value;
 			var percentual = document.getElementById("per").value;
-			s = parseInt(salario);
-			p = parseInt(percentual);
+			s = parseInt(salario.replace(',','.');
+			p = parseInt(percentual.replace(',','.');
 
 			var resultado = conta( s, p);
 
