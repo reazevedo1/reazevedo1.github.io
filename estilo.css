@@ -70,6 +70,9 @@
               height: 200px;
               text-align: center;
             }
+            .content_ativ{               
+                text-align: center;
+            }
 			body {
  			  margin: 0;
 			}
