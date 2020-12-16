@@ -2,16 +2,19 @@
 <html>
 <head>
 <meta charset="utf8">
+<title>Simulação 02</title>
 </head>
 <body>
-<h1 class="centro"> Exercício 02 </h1>
-<h3> Coloque o valor, selecione o elemento que irá inserir o valor, além de colocar o elemento com quem ele irá se comparar</h3>
-<p> MOL de H2O -> G de O , VOLUME H20 -> MOL H2</p>
+<h1> Simulação 2: Relações diretas em uma reação química</h1>
+<h3>Insira a quantidade de mols de H2O desejada para receber a massa (em gramas) de O2 necessária:</h3>
+<p> MOL de H2O --> G de O2</p>
 <br>
 <input id = "mol">
 <button onclick="t();">Executar</button>
 <p id="conta"></p>
-
+<br>
+<h3>Insira a quantidade do volume (em litros) de H2O desejada para receber a quantidade de mols de H2 necessária:</h3>
+<p>VOLUME H20 --> MOL H2</p>
 <br>
 <input id = "vol">
 <button onclick="m();">Executar</button>
@@ -20,9 +23,9 @@
 <script >
 	function t(){
 	var rmol = document.getElementById("mol").value;
-	var go = 16;
+	var go = 8;
 	var r= rmol*go;
-	var resultado= "1 MOL de H2O -> 16 G de O <br>" + rmol + "MOL de H2O -> X G de O <br> <br>" + rmol + " * " + go + " = x G de O <br>" + "X G de O = " + r; 
+	var resultado= "1 MOL de H2O -> 8 G de O2 <br>" + rmol + "MOL de H2O -> X G de O2 <br> <br>" + rmol + " * " + go + " = x G de O2 <br>" + "X G de O2 = " + r; 
 	document.getElementById("conta").innerHTML = resultado;
 	}
 
