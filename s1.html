@@ -30,7 +30,7 @@
 			function chamaMOL()
 			{
 				var n1 = document.getElementById("entrada1").value;
-				n1 = parseFloat(n1);
+				n1 = parseFloat(n1.replace(',','.'));
 				var g_O2 = 32;
 				var massa = n1 * g_O2;
 				var resultado = "1mol de O2 --> 32g de O2 <br>" + n1 + "mol de O2 --> Xg de O2 <br> xg de O2 --> " + n1 + " * " + g_O2 + "<br> xg de O2 = " + massa + "<br> <br> Logo, " + n1 + "mol's de O2 equivalem a " + massa + " gramas de O2";
@@ -40,7 +40,7 @@
 			function chamaGRAMA()
 			{
 				var n1 = document.getElementById("entrada2").value;
-				n1 = parseFloat(n1);
+				n1 = parseFloat(n1.replace(',','.'));
 				var g_O2 = 32;
 				var n_mol  =  n1/g_O2;
 				var resultado = "1mol de O2 --> 32g de O2 <br> x mol de O2 --> " + n1 + "g de O2 <br> x mol de O2 * " + g_O2 + "g de O2 --> " + n1 +"g de O2 <br> x mol de O2 --> " + n1 + " / " + g_O2 + "g de O2 <br> xg de O2 = " + n_mol + " mol's de O2<br> <br> Logo, " + n1 + " gramas de O2 equivalem a " + n_mol + " mol's de O2";
