@@ -21,10 +21,10 @@ function recebevalores(){
 	var v2 = document.getElementById("n2").value;
 	var v3 = document.getElementById("n3").value;
 	var v4 = document.getElementById("n4").value;
-	n_car = parseInt(v1);
-	v_vend = parseInt(v2);
-	s_fx = parseInt(v3);
-	por_car = parseInt(v4);
+	n_car = parseInt(v1.replace(',','.');
+	v_vend = parseInt(v2.replace(',','.');
+	s_fx = parseInt(v3.replace(',','.');
+	por_car = parseInt(v4.replace(',','.');
 
 	var resultado = salario(n_car, v_vend, s_fx, por_car);
 
