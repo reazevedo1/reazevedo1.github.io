@@ -15,7 +15,7 @@
 	<script>
 		function recebevalores(){
 			var temp = document.getElementById("tempF").value;
-			tf = parseInt(temp);
+			tf = parseInt(temp.replace(',','.');
 
 			var resultado = convert(tf);
 
