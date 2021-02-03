@@ -45,33 +45,7 @@
 				alert("Apagar a linha toda");
 				$(this).parents("#acervo tr").remove();
 			})
-			
-			
 
-			function Livro(plivro, pdescricao, pgenero, pautor{
-				this.titulo = ptitulo;
-				this.descricao = pdescricao;
-				this.genero = pgenero;
-				this.autor = pautor;
-			}
-
-			$("input[type=submit]").click(function(){
-				let linhastabela = $("#acervo tbody").children();
-				let leistadelivro = [];
-				$.each(linhastabela, function(indice, linha){
-					console.log(linha);
-					let titulo = $(linha).find("td:nth-child(1)").text();
-					let descricao = $(linha).find("td:nth-child(2)").text();
-					let genero = $(linha).find("td:nth-child(3)").text();
-					let autor = $(linha).find("td:nth-child(4)").text();
-					if(titulo!==""){
-					let livro = new livro(titulo, descricao, genero, autor);
-					listadelivro.push(livro);
-				}
-			})
-			let liststr = JSON.stringify(listadelivro);
-			$("input[name=acervo_post]").val(listsrt);
-			})
 	
 		});
 
