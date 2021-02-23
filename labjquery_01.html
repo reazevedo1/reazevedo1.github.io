@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Exercício 01</title>
+    <script type="text/javascript">
+     
+        function inverter(){
+            var inverter = document.getElementsByName("txt");
+            valor = inverter.item(0).value.toString().split("");
+            normal = valor.reverse().join("");
+            document.body.innerHTML += normal + "<br />";
+        }
+ 
+    </script>
+</head>
+<body>
+<h2>Este programa lê uma frase e a reescreve abaixo invertendo os seus caracteres: </h2>
+<form>
+<input type="text" name="txt" value="" />
+<input type="button" id="btn" value="Inverter" onclick="inverter()" />
+</form>
+</body>
+</html>
+
+
+
+
