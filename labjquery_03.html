@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 03</title>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function repeticoes(ps, palavra){
+            return ps.filter((v) => (v === palavra)).length;
+        }
+        $(function(){
+            $("#texto").click(function(){
+                let valorPalavra = $("#palavra").val();
+                const regex = /[0-9]/;
+                if(regex.test(valorPalavra) || valorPalavra == '')
+                {
+                    alert("Digite um valor válido.");
+                }
+                else{
+
+
+                    var ps = valorPalavra.split(" ").map(function(palavra){ 
+                        return palavra.toLocaleLowerCase().replace(/[.,]/g, ''); 
+                    });
+                    console.log(ps);
+
+                    var i = 0;
+                    var array_oco = [];
+                    var jaForam = [];
+                    var x = 0;
+                    for(palavra of ps){
+                        if(jaForam.indexOf(palavra) == -1){
+                            let oco = (repeticoes(ps, palavra));
+                            jaForam.push(palavra);
+                            array_oco[x] = oco;
+                        }
+                        else{
+                            x--;
+                        }
+                        i++;
+                        x++;
+                        }
+
+                    for(i=0;i<jaForam.length;i++)
+                    {
+                        let objeto_tr = $("<tr>");
+                        $("#acervo").append(objeto_tr);
+                                
+
+                        let objeto_td = $("<td>"); 
+                        let objeto_td2 = $("<td>");
+                        objeto_td.text(jaForam[i]);
+                        objeto_td2.text(array_oco[i]);
+                        console.log(jaForam);
+
+                        objeto_tr.append(objeto_td);
+                        objeto_tr.append(objeto_td2);
+
+                        
+                    }
+                    
+                }
+
+
+            })
+        })
+</script>
+</head>
+<body>
+<section>
+<h2>Este programa lê um texto e separa todas as ps em um array, indicando para cada uma delas o número de vezes que aparece no texto.</h2> 
+<input id="palavra">  <button id="texto">Executar</button>
+<p id="resultado">
+</section>
+
+<section id="l2" style=" width: 100%;">
+    <section id="tamanho3" style="padding-left: 50px;">
+    <h1 id="teste" style="padding-left: 0px;">Tabela</h1>
+    <table width="30%" border="1" id="acervo">
+        <tr>
+            <th class="teste">Nome</th>
+            <th class="teste">Ocorrencias</th>
+        </tr>
+    </table>
+</section>
+</section>
+
+ 
+
+</body>
+</html>
