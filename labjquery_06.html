@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Exercício 06</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+	$("#conta").click(function(){
+		let data = $("#data_nascimento").val(); 
+        let ano = data.substr(0,4); 
+        let mes = data.substr(5,2); 
+        let dia = data.substr(8,2);
+
+        let hoje = new Date;
+        let d = new Date(ano,mes - 1,dia); 
+
+
+        let mlseg = d.getTime();
+        let today = hoje.getTime();
+        
+        const calcdt = Math.abs(mlseg - today); 
+        let D = (1000 * 60 * 60 * 24);
+        const dias = Math.ceil(calcdt/ D); 
+        $("#r").text("Você possui " + dias + " dias de vida");
+
+	})
+});
+ 
+    </script>
+</head>
+<body>
+<h2>Este programa lê uma data de nascimento e retorna quantos dias de vida a pessoa tem:</h2>
+<input id="data_nascimento" type="date">
+<button id="conta">Calcular</button>
+<p id="r" style="font-size: 20px;">
+</p>
+</body>
+</html>
