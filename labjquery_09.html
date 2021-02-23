@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 09</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(function(){
+    
+    $("#S").keyup(function(){
+        
+        $("#mostrar").mousedown(function() {
+        $("#S").attr("type", "text");
+        });
+
+        $("#mostrar").mouseup(function() {
+        $("#S").attr("type", "password");
+        });
+
+        const letm = /[a-z]/;
+        const letM = /[A-Z]/;
+        const especiais = /[@#!$%&*()-+.,=]/;
+        const numeros = /[1-9]/;
+        
+        if(letm.test($("#S").val()) || letM.test($("#S").val()))
+        {
+            $("#r").text("FRACA").css({"color":"red"});
+        }
+        if(letm.test($("#S").val()) && letM.test($("#S").val()) && numeros.test($("#S").val()))
+        {
+            $("#r").html("MODERADA").css({"color":"orange"});
+        }
+        if(letm.test($("#S").val()) && letM.test($("#S").val()) && numeros.test($("#S").val()) && especiais.test($("#S").val()))
+        {
+            $("#r").html("FORTE").css({"color":"green"});
+        }
+        if($("#S").val() == '')
+        {
+            $("#r").html("");
+        }
+    })
+
+   
+});
+
+    </script>
+</head>
+<body>
+    <h2>Este programa classifica sua senha como:</h2>
+	<p>- Fraca (em vermelho) se só possuir letras minúsculas ou maiúsculas</p>
+	<p>- Moderada (em laranja) se possuir letras minúsculas e maiúsculas e números</p>
+	<p>- Forte (em verde) se possuir letras minúsculas e maiúsculas, números e caracteres especiais (@, #, !, $, %, &, *, (, ), -, +, ., =)</p>
+	<input id="S" type="password" placeholder="Senha"><br>
+	<p id="r"></p>
+	<button id="mostrar" >Ver senha</button>
+
+
+</body>
+</html>
