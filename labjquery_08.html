@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Exercício 08</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+	$(function(){
+
+	    $("#dist").click(function(){
+	        let data1 = $("#Pd").val(); 
+	        let data2 = $("#Sd").val(); 
+
+	        let ano1 = data1.substr(0,4);
+	        let mes1 = data1.substr(5,2);
+	        let dia1 = data1.substr(8,2);
+
+	        let ano2 = data2.substr(0,4);
+	        let mes2 = data2.substr(5,2);
+	        let dia2 = data2.substr(8,2);
+
+	        let data_qualquer1 = new Date(ano1,mes1 - 1,dia1);
+	        let data_qualquer2 = new Date(ano2,mes2 - 1,dia2);
+	        
+	        let d1 = data_qualquer1.getTime();
+	        let d2 = data_qualquer2.getTime(); 
+
+	        const calcData = Math.abs(d1- d2);
+	        let calcSemana = (1000 * 60 * 60 * 24 * 7);
+	        const semans = Math.ceil(calcData/calcSemana);
+	        $("#r").text("A diferença entre essas duas datas esta por volta de " + semans + " semana(s).");
+	    })
+
+	});
+    </script>
+</head>
+<body>
+<h2>Este programa que lê duas datas e indica, em semanas, a distância entre elas.</h2>
+	<input id="Pd" type="date">
+	<input id="Sd" type="date">
+	<button id="dist">Ver distância</button>
+	<p id="r">
+
+</body>
+</html>
