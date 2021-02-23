@@ -8,7 +8,7 @@
             var frase = document.getElementById("frase");
             let arm = frase.value;
 
-            for (var i = 0; i <= frase.value.length; i++) {
+            for (var i = 0; i < frase.value.length; i++) {
               if (arm[i] == "A" || arm[i] == "a" || arm[i] == "E" || arm[i] == "e" || arm[i] == "I" || arm[i] == "i" || arm[i] == "O" || arm[i] == "o" || arm[i] == "u" || arm[i] == "U" ) {
                  document.body.innerHTML += arm[i].bold();
             }else
