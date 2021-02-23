@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Exercício 07</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+   $(function(){
+	$("#escrev").click(function(){
+		let data = $("#data").val();
+
+		let ano = data.substr(0,4);
+        let mes = data.substr(5,2); 
+        let dia = data.substr(8,2);
+
+        var MES='';
+        if(mes == 1){
+        	MES = "Janeiro";
+        }
+        else if(mes == 2){
+        	MES = "Fevereiro";
+        }
+        else if(mes == 3){
+        	MES = "Março";
+        }
+        else if(mes == 4){
+        	MES = "Abril";
+        }
+        else if(mes == 5){
+        	MES = "Maio";
+        }
+        else if(mes == 6){
+        	MES = "Junho";
+        }
+        else if(mes == 7){
+        	MES = "Julho";
+        }
+        else if(mes == 8){
+        	MES = "Agosto";
+        }
+        else if(mes == 9){
+        	MES = "Setembro";
+        }
+        else if(mes == 10){
+        	MES = "Outubro";
+        }
+        else if(mes == 11){
+        	MES = "Novembro";
+        }
+        else if (mes == 12) {
+        	MES = "Dezembro";
+        }
+
+
+        $("#r").text(dia + " de " + MES + " de " + ano + ".");
+	})
+})
+ 
+    </script>
+</head>
+<body>
+<h2>Este programa lê uma data de nascimento em formato de dd/mm/aaaa e a reescreve por extenso.</h2>
+<input id="data" type="date">
+<button id="escrev">Reescrever</button> 
+<p id="r">
+</p>
+
+</body>
+</html>
