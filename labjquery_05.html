@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Exercício 05</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#texto").click(function(){
+
+            let t = $("#palavra").val();
+            let procurar = $("#procurar").val();
+            let substituir = $("#substituir").val();
+            const regex = /[0-9]/;
+                let arrayt = t.split(' ');
+
+                for(i=0;i<arrayt.length;i++)
+                {
+                    if(arrayt[i]==procurar)
+                    {
+                        arrayt[i] = substituir;
+                    }
+                }
+                let r = arrayt.join(' ');
+                $("#resultado").text(r);
+        })
+    })
+    </script>
+</head>
+<body>
+    <section>
+    <h3>Este programa implementa a funcionalidade "substituir" em textos. Ao executar, procurarará as ocorrências no texto do valor digitado em "procurar" e trocará pelo valor digitado em "substituir".</h3>
+    <input id="palavra" placeholder="Texto">
+    <input id="procurar" placeholder="Procurar">
+    <input id="substituir" placeholder="Substituir">
+    <button id="texto">Executar</button>
+    <p id="resultado">
+
+    </p>
+    </section>
+</body>
+</html>
