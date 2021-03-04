@@ -1,0 +1,80 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>Ar atmosférico- questão01</title>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140118868-1"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{
+			font-family: 'Montserrat', sans-serif;
+			margin-left: 1%;
+			margin-right: 1%;
+		}
+		p{
+			margin-left: 1.1%;
+			margin-right: 1.1%;
+		}
+		.titulo {
+		  background-color: #3F7FBF;
+		  padding-top:0.5%;
+		  padding-bottom:0.5%; 
+		  text-align: center;
+		  font-family: 'Noto Sans JP', sans-serif;
+		  color: white;
+		  -moz-border-radius:7px;-webkit-border-radius:7px; border-radius:7px;
+		}]
+		button{
+		 background-color: white; 
+		  color: black; 
+		  border: 2px solid #3F7FBF;
+		  -moz-border-radius:7px;-webkit-border-radius:7px; border-radius:7px;
+		}
+
+		button:hover {
+		  background-color: #3F7FBF;
+		  color: white;
+		  -moz-border-radius:7px;-webkit-border-radius:7px; border-radius:7px;
+		}		
+	</style>
+</head>
+<script>
+	
+	function certo() {
+
+	var a = document.querySelector("#resposta1").checked;
+		if(a)
+		{
+			document.write("CORRETO!!</div></div><div> <button class = 'b1'>Ver resolução</button><p class = 'b2' style = 'display: none;'>  Para resolver esta questa, utiliza-se a Lei de Charles que corresponde à Equação Fundamental dos Gases adaptada para Transformações Isobáricas, isto é, que não apresentam alteração na Pressão.	<br><br>	V0/T0= V/T <br><br> V/300= 1,2V/T -> T= 300*1,2= 360K  <br><br> Note que como o volume aumentou 20%, o volume final será então o volume inicial multiplicado por 1,2 (100% + 20%), dessa forma V se anula dos dois lados e pela multiplicação cruzada (produto dos meios é igual ao produto dos extremos) tem-se a resposta. Todavia, ele deseja o resultado em ºC e não em K, para tanto, basta converter:  <br><br> 360-273= 87°C<br><br></p></div>");
+
+		}
+		else  {
+			document.write("Estude mais! <br><br> </div></div><div> <button class = 'b1'>Ver resolução</button><p class = 'b2' style = 'display: none;'>  Para resolver esta questa, utiliza-se a Lei de Charles que corresponde à Equação Fundamental dos Gases adaptada para Transformações Isobáricas, isto é, que não apresentam alteração na Pressão.	<br><br>	V0/T0= V/T <br><br> V/300= 1,2V/T -> T= 300*1,2= 360K  <br><br> Note que como o volume aumentou 20%, o volume final será então o volume inicial multiplicado por 1,2 (100% + 20%), dessa forma V se anula dos dois lados e pela multiplicação cruzada (produto dos meios é igual ao produto dos extremos) tem-se a resposta. Todavia, ele deseja o resultado em ºC e não em K, para tanto, basta converter:  <br><br> 360-273= 87°C<br><br></p></div>");
+		}
+		var button = document.querySelector('.b1');
+		var button2 = document.querySelector('.b2');
+
+		button.onclick = function() {
+		button2.style.display = 'block';
+	}
+	}
+</script>
+<body>
+		<div class="titulo">Questão 01 </div><br>
+		Um gás ideal exerce pressão de 2 atm a 27°C. O gás sofre uma transformação isobárica na qual seu volume sofre um aumento de 20%. Supondo não haver alteração na massa do gás, sua temperatura passou a ser, em °C:
+		<br><br>Resposta:<br>
+		<input type="radio" value="32"> 32<br>
+		<input type="radio" value="100"> 100<br>
+		<input type="radio" value="54"> 54<br>
+		<input type="radio" value="120 "> 120<br>
+
+		<input type="radio" value="87" id="resposta1"> 87
+
+		<br><br>
+		 <button id="botao" onclick="certo()">Enviar</button>
+<br><br>
+
+</body>
+</html>
