@@ -1,0 +1,83 @@
+.secao
+{
+    padding: 1%;
+    height: 900px;
+    background-color: white;
+    border: solid 60px #820000;
+}
+h1{
+    color: black;
+}
+body
+{
+    background-color: #820000;
+}
+
+.secao p 
+{
+    font-size: 110%;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.desc
+{
+    float: left;
+    text-align: justify;
+}
+
+.genero
+{
+    text-align: justify;
+    float: right;
+    width: 40%;
+}
+
+.tit
+{
+    float: left;
+    width: 60%;
+}
+
+.titulo
+{
+    float: left;
+    width: 80%;
+}
+
+.opniao
+{
+    width: 100%;
+    float: left;
+}
+
+.opniao p 
+{
+    color: #484343cc;
+}
+
+.elenco
+{
+    float: right;
+    width: 40%;
+}
+
+.image
+{
+    width: 60%;
+    float: left;
+}
+
+ a:hover{
+    color: #820000;
+}
+
+h3 {
+   color: white;
+   text-align: center;
+   margin-left: 10%;
+
+
+}
