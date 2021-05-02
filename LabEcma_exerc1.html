@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var array = [];
+function adicionar(valor){
+    array.push(valor);
+    var min = Math.min(...array);
+	var max = Math.max(...array);
+	let unique = [...new Set(array)];
+	let ord = array.sort();
+
+	document.body.innerHTML += "Array = " + array + "<br />" + "Menor valor = " + min + "<br />" + "Maior valor = " + max + "<br />" + "Array sem repetições = " + unique + "<br />" + "Array ordenado = " + ord + "<br />"+ "<br />"+ "<br />";
+}
+</script>
+</head>
+<body>
+<p>Crie um script que implemente as funções min, max, uniq, sortNum. Tais funções devem retornar o valor mínimo (min) e máximo (max) de um array de números, retornar o array sem repetições (uniq) e ordenar o array numérico (sortNum):<p>
+<form name='frm'>
+<input type='text' name='dado'>
+<input type='button' onclick='javascript:adicionar(document.frm.dado.value);' value='Adicionar numero no array'/>
+</form>
+</body>
+</html>
