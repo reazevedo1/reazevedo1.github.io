@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Exercício 02</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+		$(function(){
+		    $("#Ver").click(function(){
+		        let a = $("#numero").val();
+		        if(a == '')
+		        {
+		            alert("Digite um valor válido, por favor.");
+		        }
+
+		       else{
+
+		            let numero = a.split(",");
+		            let t = a.length; 
+		            if(numero[t-1] == "")
+		            {
+		                numero.pop(); 
+		            }
+		            $("#resultado").html("Até a posição " + a + " a sequência de Fibonacci é dada por: " +  fibo(a) + ".");
+		        }
+		        
+		    })
+
+		    function fibo (numero) 
+		    {
+		        let arr = [];
+		        arr.push(0);
+		        let a = 0;
+		        let b = 1;
+		        let aux = 1;
+		        for (let i=0; i<numero; i++) 
+		        {
+	
+		            arr.push(aux);
+		            aux = a + b;
+		            a = b;
+		            b = aux;
+		        }
+	
+		        return arr.join(",");
+		    }
+		})
+ 
+    </script>
+</head>
+<body>
+	<section>
+		<p> Crie uma função para exibir a sequência de Fibonacci até a posição n, por exemplo, a série com os quatro primeiros elementos é 0, 1, 1, 2. O valor da entrada e saída são respectivamente um  número  e  um  arr. Você  deve disponibilizar  uma  página para  entrada  do  número  n  e  sua respectiva saída.</p>
+		<div> 
+		<input id="numero">
+		<button id="Ver">Ver</button>
+		<p id="resultado"></p>
+</div>
+</section>
+</body>
+</html>
