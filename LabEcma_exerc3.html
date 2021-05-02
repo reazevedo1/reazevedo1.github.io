@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercício 3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	$("#rodar").click(function(){
+		let v = $("#numeros").val();
+
+		if(v == '')
+        {
+            alert("Digite um valor válido, por favor.");
+        }
+        else{
+
+        	let n = v.split(",");
+
+			let teste = n.map(function(numero){  
+				return numero * 2;
+			})
+			let a = teste.join(",");
+			$("#resultado").html("O valor duplicado é "+ a + "."); 
+
+			let par = n.filter(function(pares){ 
+				return pares = (pares%2 == 0);
+			})
+			let b = par.join(",");
+			$("#result").html("O(s) número(s) par(es) é(são): "+ uniquei(b) + "."); 
+
+			let	soma = n.reduce(function(s,n){
+				return parseInt(s) + parseInt(n);
+			})
+			$("#rsoma").html("A soma dos números é: "+ soma + "."); 
+
+        }
+		
+
+	})
+	function uniquei (u)
+    {
+        let unico = [...new Set(u)];
+        return unico.join(",");
+    }	
+	
+})	
+	</script>
+</head>
+<body>
+	<h2>Iterações em Arrays usando map, filter e reduce</h2>
+	<p> a) Implemente uma função double(), que retorne o array com cada um dos elementos
+	duplicado. A função deve usar map.<br>
+	b) Implemente uma função evenElements(), que retorne um array com apenas os
+	elementos pares do array original. A função deve usar filter.<br>
+	c) Implemente uma função sum(), que retorne a soma de todos os elementos do array. A
+	função deve usar reduce.</p>
+	<p>Digite os números os números desejados:</p>
+	
+	<input id="numeros">
+	<button id="rodar">Resultados</button>
+	<p>Lembre de separa-los por vírgula</p>
+
+	<p id="resultado"></p>
+	<p id="result"></p>
+	<p id="rsoma"></p>
+
+</body>
+</html>
