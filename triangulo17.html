@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TRIÂNGULOS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#execut").click(function(){
+
+			let n1 = $("#numero1").val();
+			let n2 = $("#numero2").val();
+			let n3 = $("#numero3").val();
+
+			n1 = parseInt(n1);
+			n2 = parseInt(n2);
+			n3 = parseInt(n3);
+
+			if(n1>0 && n2>0 && n3>0){
+				if(n1 < n2 + n3 || n2 < n1 + n3 || n3 < n1 + n2){
+
+					if(n1 == n2 && n1 == n3)
+					{	
+						$("#result").html("Seu triângulo é equilátero pois, possui todos os lados iguais!"); 
+					}
+					else if(n1 == n2 || n1 == n3 || n2 == n3){
+						$("#result").html("Seu triângulo é isósceles pois, possui todos dois lados iguais!"); 
+					}
+					else $("#result").html("Seu triângulo é escaleno pois, possui todos os lados diferentes!"); 
+
+				}
+			}
+			else $("#result").html("Não é um triângulo!");
+
+		})
+	})
+	</script>
+</head>
+<body>
+
+<h1>Tipos de triângulos</h1>
+	<p>Defina o tamanho de cada lado de um triângulo e descubra qual é o seu tipo:</p>
+	<div id="tarefas2"> <br>
+	<input id="numero1" type="number" placeholder="lado 1">
+	<input id="numero2" type="number" placeholder="lado 2">
+	<input id="numero3" type="number" placeholder="lado 3">
+	<button id="execut">Descobrir</button>
+	<h3 id="result"></h3>
+
+</body>
+</html>

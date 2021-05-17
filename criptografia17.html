@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CRIPTOGRAFIA</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	$("#execut").click(function(){
+		let texto = $("#t").val();
+		let nRota = $("#n").val();	
+		nRota = parseInt(nRota);
+		var values = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+       	let limA = texto.split('');
+       	let tam1 = texto.length;
+       	let tam2 = values.length;
+       	let i = 0;
+       	let x = 0;
+       	let a;
+       	let aux;
+
+       	while(x<tam1)
+       	{
+       		aux = limA[x];
+       		while(i<tam2)
+       		{
+       			if(values[i] == aux)
+       			{
+       				if((i+nRota)>tam2)
+       				{
+       					a = i + nRota - tam2;
+       					limA[x] = values[a];
+       				}
+       				else if((i+nRota) == tam2)
+       				{
+       					limA[x] = values[0];
+       				}
+       				else{
+       					limA[x] = values[i+nRota];
+       				}
+       			}
+       			i++;
+       		}
+       		i = 0;
+       		x++;
+       	}	
+       	limS = limA.join('');
+       	$("#result").html("Texto criptografado: <br> " + limS);
+
+	})
+})
+	</script>
+</head>
+<body>
+
+<h1> Criptografia por rotação </h1>
+	<input id="t" placeholder="Digite um texto">
+	<input id="n" placeholder="Defina um número para a rotação">
+	<button id="execut">Criptografar</button>
+	<h3 id="result"></h3>
+
+</body>
+</html>

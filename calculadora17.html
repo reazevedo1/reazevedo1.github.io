@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	$("#calcular").click(function(){
+
+		let n1 = $("#n1").val();
+		let n2 = $("#n2").val();
+		var opcoes = $("#op").val();
+
+		if(n1 == '' || n2 == '')
+		{
+			$("#resultado1").html("Insira uma valor válido, pfv!"); 
+		}
+		else{
+			n1 = parseInt(n1);
+			n2 = parseInt(n2);
+
+			let calculo = 0;
+			if(opcoes == '1')
+			{
+				calculo = n1+n2;
+				$("#result").html("A soma de " + n1 +" e " + n2 + " é igual a " + calculo + "."); 
+			}
+			if(opcoes == '2')
+			{
+				calculo = n1-n2;
+				$("#result").html("A subtração de " + n1 +" e " + n2 + " é igual a " + calculo + "."); 
+			}
+			if(opcoes == '3')
+			{
+				calculo = n1*n2;
+				$("#result").html("A multiplicação de " + n1 +" e " + n2 + " é igual a " + calculo) + "."; 
+			}
+			else if(opcoes == '4')
+			{
+				calculo = n1/n2;
+				$("#result").html("A divisão de " + n1 +" e " + n2 + " é igual a " + calculo + "."); 
+			}
+		}
+	})
+	})</script>
+</head>
+<body>
+
+
+	<h1> Calculadora </h1>
+	<p>Digite o dois números e qual tipo de operação deseja realizar:</p>
+	<div id="tarefas2"> <br>
+	<input id="n1" type="number">
+	<input id="n2" type="number">
+	<select id="op">
+		<option value="1"> Soma </option>
+		<option value="2"> Subtração</option>
+		<option value="3"> Multiplicação</option>
+		<option value="4"> Divisão</option>
+	</select>
+	<button id="calcular">CALCULAR</button>
+	<h3 id="result"></h3>
+	
+
+
+</body>
+</html>
